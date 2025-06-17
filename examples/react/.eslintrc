@@ -1,13 +1,26 @@
 {
-    "extends": ["eslint:recommended", "plugin:react/recommended"],
-    "settings": {
-        "react": {
-            "version": "17.0.2"
-        }
-    },
-    "rules": {
-        "no-extra-parens": 0,
-        "react/prop-types": 0,
-        "react/react-in-jsx-scope": 0
+  // Extensão das configurações base recomendadas pelo ESLint e também pelo React
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended"
+  ],
+
+  // Configurações específicas do React (informando qual versão estamos usando)
+  "settings": {
+    "react": {
+      "version": "17.0.2" // Versão específica do React usada no projeto
     }
+  },
+
+  // Regras personalizadas para o projeto
+  "rules": {
+    // Permite parênteses extras sem dar erro (ajuda a evitar chatices desnecessárias na hora de escrever expressões)
+    "no-extra-parens": 0,
+
+    // Desativa a obrigatoriedade de usar PropTypes nos componentes React
+    "react/prop-types": 0,
+
+    // Como estamos usando React 17+, não precisamos mais importar o React em todos os arquivos JSX
+    "react/react-in-jsx-scope": 0
+  }
 }

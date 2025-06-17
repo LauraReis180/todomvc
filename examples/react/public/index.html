@@ -1,19 +1,34 @@
 <!DOCTYPE html>
 <html lang="en" data-framework="react">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="description" content="A TodoMVC written in React." />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-        <title>TodoMVC: React</title>
-    </head>
-    <body>
-        <section class="todoapp" id="root"></section>
-        <footer class="info">
-            <p>Double-click to edit a todo</p>
-			<p>Created by the TodoMVC Team</p>
-			<p>Part of <a href="http://todomvc.com">TodoMVC</a></p>
-        </footer>
-		<script src="./base.js"></script>
-    </body>
+<head>
+    <meta charset="UTF-8" />
+    <!-- Meta descrição básica, sempre bom pra SEO e pra deixar claro o propósito do projeto -->
+    <meta name="description" content="A TodoMVC written in React." />
+    <!-- Configuração padrão de viewport pra garantir o layout responsivo -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Compatibilidade com versões antigas do Internet Explorer (só por precaução mesmo) -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>TodoMVC: React</title>
+</head>
+
+<body>
+    <!-- Esse section é onde o React vai "injetar" todo o app. Aqui fica o root da aplicação -->
+    <section class="todoapp" id="root"></section>
+
+    <footer class="info">
+        <!-- Só umas informações adicionais pra quem usa o app -->
+        <p>Double-click to edit a todo</p>
+        <p>Created by the TodoMVC Team</p>
+        <p>
+            Part of
+            <!-- Link externo pro site do TodoMVC. Coloquei target e rel pra boas práticas de segurança -->
+            <a href="http://todomvc.com" target="_blank" rel="noopener noreferrer">
+                TodoMVC
+            </a>
+        </p>
+    </footer>
+
+    <!-- Script base, que o projeto original usa pra algumas funções globais -->
+    <script src="./base.js"></script>
+</body>
 </html>
